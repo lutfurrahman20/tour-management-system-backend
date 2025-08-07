@@ -1,5 +1,5 @@
 import { envVars } from "../config/env";
-import { IAuthProvider, Role } from "../modules/user/user.interface";
+import { IAuthProvider, IUser, Role } from "../modules/user/user.interface";
 import { User } from "../modules/user/user.model";
 import bcryptjs from "bcryptjs";
 
@@ -20,7 +20,7 @@ export const seedSuperAdmin = async () => {
       provider: "credentials",
       providerId: envVars.SUPER_ADMIN_EMAIL,
     };
-    const payload = {
+    const payload : IUser = {
       name: "Super admin",
       role: Role.SUPER_ADMIN,
       email: envVars.SUPER_ADMIN_EMAIL,
