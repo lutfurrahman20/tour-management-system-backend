@@ -5,10 +5,7 @@ import httpStatus from "http-status-codes";
 import { User } from "../user/user.model";
 import bcryptjs from "bcryptjs";
 
-import {
-  createNewAccessTokenWithRefreshToken,
-  createUserTokens,
-} from "../../utils/userTokens";
+import {  createNewAccessTokenWithRefreshToken,  createUserTokens,} from "../../utils/userTokens";
 import { JwtPayload } from "jsonwebtoken";
 import { envVars } from "../../config/env";
 
